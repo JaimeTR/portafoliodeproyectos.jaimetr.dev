@@ -1,5 +1,18 @@
 [
   {
+    "id": 103,
+    "title": "preuba",
+    "description": "fasf",
+    "image": "/projects/Capturadepantalla2025-06-08211755.png",
+    "category": "Webs",
+    "technologies": [
+      "HTML5",
+      "Vercel"
+    ],
+    "url": "https://portafoliodeproyectos-jaimetr-dev.vercel.app/",
+    "allowIframe": true
+  },
+  {
     "id": 1,
     "title": "Corporate WP Theme",
     "description": "Tema de WordPress premium desarrollado a medida para corporaciones y empresas B2B.",
