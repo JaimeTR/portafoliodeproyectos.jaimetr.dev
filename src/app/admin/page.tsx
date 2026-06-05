@@ -108,6 +108,7 @@ export default function AdminPage() {
       description: "",
       image: "",
       category: "Webs",
+      rubro: "",
       technologies: [],
       url: "",
       allowIframe: true
@@ -347,8 +348,7 @@ export default function AdminPage() {
                     <option value="" disabled>Selecciona una categoría</option>
                     {[
                       "Webs", "Sistemas Web", "Software a Medida", "Ecommerce", 
-                      "Inteligencia Artificial", "Landing Pages", 
-                      "Dashboards", "Apps", "UX/UI", "APIs"
+                      "Inteligencia Artificial", "Landing Pages", "Automatizaciones"
                     ].map(cat => (
                       <option key={cat} value={cat}>{cat}</option>
                     ))}
@@ -364,6 +364,25 @@ export default function AdminPage() {
                     className="w-full bg-zinc-800 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-400 mb-1">Rubro / Sector del Cliente</label>
+                <select 
+                  value={editingProject.rubro || ""}
+                  onChange={e => setEditingProject({...editingProject, rubro: e.target.value})}
+                  className="w-full bg-zinc-800 border border-white/10 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-accent appearance-none cursor-pointer"
+                >
+                  <option value="">Sin rubro especificado</option>
+                  {[
+                    "Clínica Dental", "Instituto / Educación", "E-commerce", "Inmobiliaria",
+                    "Abogados / Legal", "Salud / Hospital", "Fintech / Banca",
+                    "Restaurante / Delivery", "Agencia de Viajes", "Marketing / Agencia",
+                    "RRHH", "Fitness / Deporte", "Tecnología / SaaS", "Corporativo", "Otros"
+                  ].map(rubro => (
+                    <option key={rubro} value={rubro}>{rubro}</option>
+                  ))}
+                </select>
               </div>
 
               <div>

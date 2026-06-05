@@ -15,10 +15,7 @@ const categories = [
   "Ecommerce",
   "Inteligencia Artificial",
   "Landing Pages",
-  "Dashboards",
-  "Apps",
-  "UX/UI",
-  "APIs"
+  "Automatizaciones"
 ];
 
 export default function ProjectGallery() {

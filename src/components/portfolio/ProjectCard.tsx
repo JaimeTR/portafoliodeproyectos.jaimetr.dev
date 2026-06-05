@@ -9,6 +9,7 @@ export interface Project {
   description: string;
   image: string;
   category: string;
+  rubro?: string;
   technologies: string[];
   url: string;
   allowIframe?: boolean;
@@ -53,9 +54,17 @@ export default function ProjectCard({ project, onOpenProject }: ProjectCardProps
           <h3 className="font-heading text-3xl font-bold tracking-tight text-white mb-1">
             {project.title}
           </h3>
-          <p className="text-base text-gray-400">
-            {project.category}
-          </p>
+          <div className="flex items-center gap-2">
+            <p className="text-base text-gray-400">
+              {project.category}
+            </p>
+            {project.rubro && (
+              <>
+                <span className="text-gray-600">·</span>
+                <span className="text-sm text-accent/80 font-medium">{project.rubro}</span>
+              </>
+            )}
+          </div>
         </div>
 
         {/* Technologies / Tags */}
